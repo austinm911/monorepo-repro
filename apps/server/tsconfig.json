@@ -8,10 +8,17 @@
 		"skipLibCheck": true,
 		"baseUrl": "./",
 		"paths": {
-			"@/*": ["./src/*"]
+			"@/*": [
+				"./src/*"
+			]
 		},
 		"outDir": "./dist",
-		"types": ["node"],
+		"customConditions": [
+			"@repo/source"
+		],
+		"types": [
+			"node"
+		],
 		"composite": true,
 		"jsx": "react-jsx",
 		"jsxImportSource": "hono/jsx"
