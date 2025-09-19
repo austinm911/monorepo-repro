@@ -4,7 +4,8 @@
 	"type": "module",
 	"zshy": {
 		"exports": {
-			"./lib/*": "./src/lib/*"
+			"./lib/*": "./src/lib/*",
+			"./db": "./src/db/index.ts"
 		},
 		"conditions": {
 			"@repo/source": "src"
@@ -49,8 +50,13 @@
 	"exports": {
 		"./lib/*": {
 			"@repo/source": "./src/lib/*",
-			"types": "./dist/*",
-			"import": "./dist/*"
+			"types": "./dist/lib/*",
+			"import": "./dist/lib/*"
+		},
+		"./db": {
+			"@repo/source": "./src/db/index.ts",
+			"types": "./dist/db/index.d.ts",
+			"import": "./dist/db/index.js"
 		}
 	}
 }
